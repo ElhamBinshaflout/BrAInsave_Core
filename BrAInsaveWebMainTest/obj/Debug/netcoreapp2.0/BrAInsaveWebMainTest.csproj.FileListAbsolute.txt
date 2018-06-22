@@ -1,0 +1,14 @@
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\BrAInsaveWebMainTest.deps.json
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\BrAInsaveWebMainTest.runtimeconfig.json
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\BrAInsaveWebMainTest.runtimeconfig.dev.json
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\BrAInsaveWebMainTest.dll
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\bin\Debug\netcoreapp2.0\BrAInsaveWebMainTest.pdb
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.csprojAssemblyReference.cache
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.csproj.CoreCompileInputs.cache
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.AssemblyInfoInputs.cache
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.AssemblyInfo.cs
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.dll
+C:\Users\Yukkuri\Desktop\BrAInsaveWebMain\BrAInsaveWebMainTest\obj\Debug\netcoreapp2.0\BrAInsaveWebMainTest.pdb
