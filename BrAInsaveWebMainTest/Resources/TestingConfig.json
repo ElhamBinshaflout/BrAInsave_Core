@@ -1,0 +1,11 @@
+﻿{
+  "CognitiveService": {
+    "baseURI": "a",
+    "subscriptionKey": "b"
+  },
+  "BlobService": {
+    "storageAccount": "c",
+    "subscriptionKey": "d",
+    "blobContainer": "e"
+  }
+}

@@ -1,13 +1,17 @@
+using BrAInsaveWebMain.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BrAInsaveWebMainTest
 {
     [TestClass]
-    public class UnitTest1
+    public class BlobServiceTests
     {
+        private readonly BlobService _blobService;
+
         [TestMethod]
-        public void TestMethod1()
+        public void GetBlobFileTest()
         {
+
         }
     }
 }

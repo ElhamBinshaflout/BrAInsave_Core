@@ -10,10 +10,13 @@ namespace BrAInsaveWebMain.Models
     {
         public static string GetBlobFile(string blobFileName)
         {
-            StorageCredentials creds = new StorageCredentials(Constants.Blob.STORAGE_ACCOUNT, Constants.Blob.SUBSCRIPTION_KEY);
+            StorageCredentials creds = new StorageCredentials(
+                ConfigService.getConfig().blobServiceConfig.storageAccount, 
+                ConfigService.getConfig().blobServiceConfig.subscriptionKey);
             CloudStorageAccount account = new CloudStorageAccount(creds, useHttps: true);
             CloudBlobClient client = account.CreateCloudBlobClient();
-            CloudBlobContainer container = client.GetContainerReference(Constants.Blob.JSON_CONTAINER);
+            CloudBlobContainer container = client.GetContainerReference(
+                ConfigService.getConfig().blobServiceConfig.blobContainer);
             CloudBlockBlob blockBlob = container.GetBlockBlobReference(blobFileName);
 
             string fileString;

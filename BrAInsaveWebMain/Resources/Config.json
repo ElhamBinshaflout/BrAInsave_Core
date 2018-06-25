@@ -1,0 +1,11 @@
+{
+  "CognitiveService": {
+    "baseURI": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/",
+    "subscriptionKey": "1617d8c5cf1145fcabe716e600b6b6ae"
+  },
+  "BlobService": {
+    "storageAccount": "brainsavemain",
+    "subscriptionKey": "g7jAnP7SQ+7BO0va9ILro5R/Z38ocDtZDxoKk+Ta9lhwKtjuv8BkX8ZM13dnNpGscGMdOlZ/KzbornAfbq36XA==",
+    "blobContainer": "****undefined****"
+  }
+}

@@ -19,7 +19,7 @@ namespace BrAInsaveWebMain.Models
             var faceAttributes = "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
 
             // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", Constants.CognitiveService.SUBSCRIPTION_KEY);
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ConfigService.getConfig().cognitiveServiceConfig.subscriptionKey);
 
             HttpResponseMessage response;
 
@@ -27,7 +27,7 @@ namespace BrAInsaveWebMain.Models
             queryString["returnFaceId"] = "true";
             queryString["returnFaceLandmarks"] = "false";
             queryString["returnFaceAttributes"] = faceAttributes;
-            var uri = Constants.CognitiveService.BASE_URI + "detect?" + queryString;
+            var uri = ConfigService.getConfig().cognitiveServiceConfig.baseURI + "detect?" + queryString;
 
             // Request body
             byte[] byteData = Encoding.UTF8.GetBytes(imageWithFaces);
