@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 
 namespace BrAInsaveWebMain.Models
@@ -10,7 +11,7 @@ namespace BrAInsaveWebMain.Models
         {
             string jsonPath;
             if (configJsonPath == null)
-                jsonPath = Directory.GetCurrentDirectory() + "/../../../" + Constants.DEFAULT_CONFIG_FILE_PATH;
+                jsonPath = getRootPath() + "/" + Constants.DEFAULT_CONFIG_FILE_PATH;
             else
                 jsonPath = configJsonPath;
 
@@ -28,6 +29,15 @@ namespace BrAInsaveWebMain.Models
             var builder = new ConfigurationBuilder().AddJsonFile(jsonPath, optional: false, reloadOnChange: true);
             IConfiguration Config = builder.Build();
             return Config;
+        }
+
+        public static string getRootPath()
+        {
+            var exePath = Path.GetDirectoryName(System.Reflection
+                   .Assembly.GetExecutingAssembly().CodeBase);
+            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+            var appRoot = appPathMatcher.Match(exePath).Value;
+            return appRoot;
         }
     }
 }
