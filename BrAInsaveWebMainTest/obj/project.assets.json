@@ -13774,11 +13774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMainTest\\BrAInsaveWebMainTest.csproj",
+      "projectUniqueName": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMainTest\\BrAInsaveWebMainTest.csproj",
       "projectName": "BrAInsaveWebMainTest",
-      "projectPath": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMainTest\\BrAInsaveWebMainTest.csproj",
+      "projectPath": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMainTest\\BrAInsaveWebMainTest.csproj",
       "packagesPath": "C:\\Users\\19332\\.nuget\\packages\\",
-      "outputPath": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMainTest\\obj\\",
+      "outputPath": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMainTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13797,8 +13797,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj": {
-              "projectPath": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj"
+            "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj": {
+              "projectPath": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj"
             }
           }
         }

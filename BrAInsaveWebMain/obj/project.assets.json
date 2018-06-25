@@ -12668,11 +12668,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj",
+      "projectUniqueName": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj",
       "projectName": "BrAInsaveWebMain",
-      "projectPath": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj",
+      "projectPath": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMain\\BrAInsaveWebMain.csproj",
       "packagesPath": "C:\\Users\\19332\\.nuget\\packages\\",
-      "outputPath": "E:\\brainsave\\BrAInsave_Core\\BrAInsaveWebMain\\obj\\",
+      "outputPath": "C:\\Users\\19332\\source\\repos\\BrAInsave_Core\\BrAInsaveWebMain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
