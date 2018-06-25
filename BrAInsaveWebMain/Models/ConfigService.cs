@@ -25,7 +25,7 @@ namespace BrAInsaveWebMain.Models
 
         private static IConfiguration getIConfig(string jsonPath)
         {
-            var builder = new ConfigurationBuilder().AddJsonFile(jsonPath);
+            var builder = new ConfigurationBuilder().AddJsonFile(jsonPath, optional: false, reloadOnChange: true);
             IConfiguration Config = builder.Build();
             return Config;
         }
