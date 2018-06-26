@@ -26,18 +26,18 @@ namespace BrAInsaveWebMain.Models
 
         private static IConfiguration getIConfig(string jsonPath)
         {
-            var builder = new ConfigurationBuilder().AddJsonFile(jsonPath, optional: false, reloadOnChange: true);
+            var builder = new ConfigurationBuilder().AddJsonFile(jsonPath);
             IConfiguration Config = builder.Build();
             return Config;
         }
 
         public static string getRootPath()
         {
-            var exePath = Path.GetDirectoryName(System.Reflection
+            var currentDirectory = Path.GetDirectoryName(System.Reflection
                    .Assembly.GetExecutingAssembly().CodeBase);
-            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
-            var appRoot = appPathMatcher.Match(exePath).Value;
-            return appRoot;
+            Regex re = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+            var rootPath = re.Match(currentDirectory).Value;
+            return rootPath;
         }
     }
 }

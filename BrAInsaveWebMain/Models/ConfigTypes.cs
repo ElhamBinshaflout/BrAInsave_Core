@@ -22,6 +22,6 @@ namespace BrAInsaveWebMain.Models
         public string storageAccount { get; set; }
         public string subscriptionKey { get; set; }
         public string blobContainer { get; set; }
-        public string connectionStrnig { get; set; }
+        public string connectionString { get; set; }
     }
 }
