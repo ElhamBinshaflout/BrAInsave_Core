@@ -14,7 +14,7 @@ namespace BrAInsaveWebMainTest
         public async System.Threading.Tasks.Task Upload2BlobTestAsync()
         {
             string resultMsg = await BlobService.Upload2blob(ConfigService.BlobServiceConfig.blobContainer,
-                ConfigService.getRootPath() + "/Resources/Test.json", "test1.json");
+                Utility.getRootPath() + "/Resources/Test.json", "test1.json");
             Assert.AreEqual("Successfully uploaded", resultMsg);
         }
 
