@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace BrAInsaveWebMain.Models
 {
-    public class Config
-    {
-        public CognitiveServiceConfig cognitiveServiceConfig { get; set; }
-        public BlobServiceConfig blobServiceConfig { get; set; }
-    }
+    //public class Config
+    //{
+    //    public CognitiveServiceConfig cognitiveServiceConfig { get; set; }
+    //    public BlobServiceConfig blobServiceConfig { get; set; }
+    //}
 
     public class CognitiveServiceConfig
     {

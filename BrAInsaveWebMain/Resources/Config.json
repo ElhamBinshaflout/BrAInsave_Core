@@ -6,7 +6,7 @@
   "BlobService": {
     "storageAccount": "brainsavemain",
     "subscriptionKey": "g7jAnP7SQ+7BO0va9ILro5R/Z38ocDtZDxoKk+Ta9lhwKtjuv8BkX8ZM13dnNpGscGMdOlZ/KzbornAfbq36XA==",
-    "blobContainer": "****undefined****",
+    "blobContainer": "json-files",
     "connectionString": "DefaultEndpointsProtocol=https;AccountName=brainsavemain;AccountKey=g7jAnP7SQ+7BO0va9ILro5R/Z38ocDtZDxoKk+Ta9lhwKtjuv8BkX8ZM13dnNpGscGMdOlZ/KzbornAfbq36XA==;EndpointSuffix=core.windows.net"
   }
 }

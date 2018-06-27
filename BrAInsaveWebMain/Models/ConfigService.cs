@@ -7,22 +7,11 @@ namespace BrAInsaveWebMain.Models
 {
     public class ConfigService
     {
-        public static Config getConfig(string configJsonPath = null)
-        {
-            string jsonPath;
-            if (configJsonPath == null)
-                jsonPath = getRootPath() + "/" + Constants.DEFAULT_CONFIG_FILE_PATH;
-            else
-                jsonPath = configJsonPath;
+        private static string configFilePath = getRootPath() + "/" + Constants.CONFIG_FILE_PATH;
+        private static IConfiguration iConfig = getIConfig(configFilePath);
 
-            var config = new Config();
-            IConfiguration iConfig = getIConfig(jsonPath);
-
-            config.cognitiveServiceConfig = iConfig.GetSection("CognitiveService").Get<CognitiveServiceConfig>();
-            config.blobServiceConfig = iConfig.GetSection("BlobService").Get<BlobServiceConfig>();
-
-            return config;
-        }
+        public static CognitiveServiceConfig CognitiveServiceConfig = iConfig.GetSection("CognitiveService").Get<CognitiveServiceConfig>();
+        public static BlobServiceConfig BlobServiceConfig = iConfig.GetSection("BlobService").Get<BlobServiceConfig>();
 
         private static IConfiguration getIConfig(string jsonPath)
         {

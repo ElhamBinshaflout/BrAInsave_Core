@@ -7,6 +7,6 @@ namespace BrAInsaveWebMain
 {
     public static class Constants
     {
-        public const string DEFAULT_CONFIG_FILE_PATH = "Resources/Config.json";
+        public const string CONFIG_FILE_PATH = "Resources/Config.json";
     }
 }
