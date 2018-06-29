@@ -9,7 +9,7 @@ namespace BrAInsaveWebMain.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            string imgURL = "https://jiafengtrystorage.blob.core.windows.net/samples-workitems/patient1";
+            string imgURL = Utility.getRootPath() + "/Resources/sad_face.jpg";
             ViewData["imgURL"] = imgURL;
             ViewData["faceDetectionResult"] = await CognitiveService.FaceDetctionAsync(imgURL);
             return View();

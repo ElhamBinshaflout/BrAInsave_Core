@@ -16,4 +16,8 @@
     <ProjectReference Include="..\BrAInsaveWebMain\BrAInsaveWebMain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Downloads\" />
+  </ItemGroup>
+
 </Project>

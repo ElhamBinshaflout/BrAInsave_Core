@@ -4,7 +4,7 @@ namespace BrAInsaveWebMain.Models
 {
     public class ConfigService
     {
-        private static string configFilePath = Utility.getRootPath() + "/" + Constants.CONFIG_FILE_PATH;
+        private static string configFilePath = Utility.getRootPath() + Constants.CONFIG_FILE_PATH;
         private static IConfiguration iConfig = getIConfig(configFilePath);
 
         public static CognitiveServiceConfig CognitiveServiceConfig = iConfig.GetSection("CognitiveService").Get<CognitiveServiceConfig>();

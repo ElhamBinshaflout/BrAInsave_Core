@@ -17,49 +17,67 @@ namespace BrAInsaveWebMain.Models
             if (CloudStorageAccount.TryParse(blobConfig.connectionString, out storageAccount))
                 try
                 {
-                    CloudBlobClient cloudBlobClient = storageAccount.CreateCloudBlobClient();
-                    CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference(blobContainer);
-
-                    BlobContainerPermissions permissions = new BlobContainerPermissions
-                    {
-                        PublicAccess = BlobContainerPublicAccessType.Blob
-                    };
-                    await cloudBlobContainer.SetPermissionsAsync(permissions);
-
-                    CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(fileName);
+                    CloudBlockBlob cloudBlockBlob = await getInitializedCloudBlockBlobAsync(storageAccount, blobContainer, fileName);
                     await cloudBlockBlob.UploadFromFileAsync(filePath);
+                    return "Successfully uploaded";
                 }
                 catch (StorageException ex)
                 {
-                    return $"Error returned from the service: {ex.Message}";
+                    throw ex;
                 }
             else
                 return
                     "A connection string has not been defined in the system environment variables. " +
                     "Add a environment variable named 'storageconnectionstring' with your storage " +
                     "connection string as a value.";
-            return "Successfully uploaded";
         }
 
-        public static string GetBlobFile(string blobFileName)
+        public static async Task<string> DownloadBlobFile(string blobContainer, string blobFileName)
         {
-            StorageCredentials creds = new StorageCredentials(
-                ConfigService.BlobServiceConfig.storageAccount, 
-                ConfigService.BlobServiceConfig.subscriptionKey);
-            CloudStorageAccount account = new CloudStorageAccount(creds, useHttps: true);
-            CloudBlobClient client = account.CreateCloudBlobClient();
-            CloudBlobContainer container = client.GetContainerReference(
-                ConfigService.BlobServiceConfig.blobContainer);
-            CloudBlockBlob blockBlob = container.GetBlockBlobReference(blobFileName);
+            BlobServiceConfig blobConfig = ConfigService.BlobServiceConfig;
+            CloudStorageAccount storageAccount;
+            if (CloudStorageAccount.TryParse(blobConfig.connectionString, out storageAccount))
+                try
+                {
+                    CloudBlockBlob cloudBlockBlob = await getInitializedCloudBlockBlobAsync(storageAccount, blobContainer, blobFileName);
+                    //MemoryStream downloadedStream = new MemoryStream();
+                    //await cloudBlockBlob.DownloadToStreamAsync(downloadedStream);
+                    //Console.WriteLine(downloadedStream == null);
+                    //StreamReader reader = new StreamReader(downloadedStream);
+                    //string downloadedFileString = reader.ReadToEnd();
+                    //Console.WriteLine(downloadedFileString == null);
 
-            string fileString;
-            using (var memoryStream = new MemoryStream())
+                    await cloudBlockBlob.DownloadToFileAsync(
+                        Utility.getRootPath() + 
+                        Constants.DOWNLOADS_FOLDER_PATH + 
+                        Constants.DOWNLOADED_FILE_NAME_PREFIX + 
+                        blobFileName, FileMode.Create);
+                    return "Successfully downloaded";
+                }
+                catch (StorageException ex)
+                {
+                    throw ex;
+                }
+            else
+                return
+                    "A connection string has not been defined in the system environment variables. " +
+                    "Add a environment variable named 'storageconnectionstring' with your storage " +
+                    "connection string as a value.";
+        }
+
+        private static async Task<CloudBlockBlob> getInitializedCloudBlockBlobAsync(CloudStorageAccount storageAccount, string blobContainer, string fileName)
+        {
+            CloudBlobClient cloudBlobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference(blobContainer);
+
+            BlobContainerPermissions permissions = new BlobContainerPermissions
             {
-                blockBlob.DownloadToStreamAsync(memoryStream);
-                var length = memoryStream.Length;
-                fileString = System.Text.Encoding.UTF8.GetString(memoryStream.ToArray());
-            }
-            return fileString;
+                PublicAccess = BlobContainerPublicAccessType.Blob
+            };
+            await cloudBlobContainer.SetPermissionsAsync(permissions);
+
+            CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(fileName);
+            return cloudBlockBlob;
         }
     }
 }
