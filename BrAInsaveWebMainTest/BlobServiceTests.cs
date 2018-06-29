@@ -9,6 +9,7 @@ namespace BrAInsaveWebMainTest
     [TestClass]
     public class BlobServiceTests
     {
+        /*
         [TestMethod]
         public async System.Threading.Tasks.Task Upload2BlobTestAsync()
         {
@@ -35,5 +36,6 @@ namespace BrAInsaveWebMainTest
                 Constants.DOWNLOADED_FILE_NAME_PREFIX +
                 filename);
         }
+        */
     }
 }
